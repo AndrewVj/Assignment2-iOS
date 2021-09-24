@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,13 +41,13 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submitted Successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-Cn-0y5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-Cn-0y5">
                                 <rect key="frame" x="80" y="455" width="254" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="WBG-Bn-GLl" userLabel="height = 25"/>
                                     <constraint firstAttribute="width" constant="254" id="iXu-ay-AtK" userLabel="width = 250"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,6 +68,9 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleAddClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzu-LH-YOE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-2G-sRO">
                                         <rect key="frame" x="0.0" y="59" width="134" height="34"/>
@@ -76,6 +79,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleSubmitClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pT2-uD-xUP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-Yq-da4">
                                         <rect key="frame" x="0.0" y="118" width="134" height="34"/>
@@ -84,6 +90,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleClearClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08T-mL-lWu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -106,6 +115,15 @@
                             <constraint firstItem="Uvu-Cn-0y5" firstAttribute="top" secondItem="n6B-sh-Cl2" secondAttribute="bottom" constant="30" id="mg6-hu-L0j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FirstName" destination="u03-IP-qvn" id="Vf0-uW-8IB"/>
+                        <outlet property="age" destination="2FZ-5f-Jpm" id="ch7-e4-HhE"/>
+                        <outlet property="country" destination="8p0-AM-Hlv" id="7Pi-9d-NIx"/>
+                        <outlet property="firstName" destination="u03-IP-qvn" id="Nf5-AG-fvR"/>
+                        <outlet property="infoBox" destination="n6B-sh-Cl2" id="fCC-0d-W14"/>
+                        <outlet property="lastName" destination="3hB-YL-YdM" id="oJm-CF-0W1"/>
+                        <outlet property="submittedLabel" destination="Uvu-Cn-0y5" id="xLy-Nm-Mea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
