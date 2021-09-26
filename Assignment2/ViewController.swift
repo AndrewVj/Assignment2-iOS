@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         }
         
         if !isValid {
+            displayText()
             submittedLabel.text = "Complete the missing info!"
         }else{
             submittedLabel.text = "Successfully submitted!"
@@ -55,8 +56,7 @@ class ViewController: UIViewController {
         country.text = ""
         age.text = ""
         infoBox.text = ""
-        
-        
+        submittedLabel.text = ""   
     }
     
     
