@@ -27,18 +27,16 @@ class ViewController: UIViewController {
     
     @IBAction func handleSubmitClick(_ sender: UIButton) {
         var isValid = true
-        if firstName.text! == "" || lastName.text! == "" || age.text! == "" || country.text == "" {
+        if firstName.text! == "" || lastName.text! == "" || age.text! == "" || country.text! == "" {
             isValid = false
         }
         
         if !isValid {
-            displayText()
             submittedLabel.text = "Complete the missing info!"
         }else{
             submittedLabel.text = "Successfully submitted!"
-            displayText()
         }
-        
+        displayText()
     }
     
     private func displayText(){
